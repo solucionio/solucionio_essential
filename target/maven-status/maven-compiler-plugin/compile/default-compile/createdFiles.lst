@@ -1,4 +1,3 @@
-com\solicionio\essential\models\data\Account.class
 com\solicionio\essential\response\handlers\IMessageHandler.class
 com\solicionio\essential\response\enums\RequestType.class
 com\solicionio\essential\netty\Netty.class

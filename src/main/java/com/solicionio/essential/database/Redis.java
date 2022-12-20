@@ -9,22 +9,19 @@ public class Redis {
 
     private Jedis jedis;
 
-    public Redis() {
-        if(createConnection()) UtilConsole.log("Redis bağlantısı kuruldu!");
-    }
-
-    public synchronized Jedis getConnection() {
-        return this.jedis;
-    }
-
-    private boolean createConnection() {
+    public Redis(String host, int port, String password) {
         try {
-            jedis = new Jedis(Configuration.REDIS_HOST, Configuration.REDIS_PORT);
-            return true;
+            jedis = new Jedis(host, port);
+            if(password != null) jedis.auth(password);
+
+            UtilConsole.log("Redis bağlantısı kuruldu!");
         } catch (JedisException jedisException) {
             UtilConsole.log("Redis bağlantısı kurulamadı. " + jedisException.getMessage());
         }
-        return false;
+    }
+
+    public Jedis getConnection() {
+        return this.jedis;
     }
 
 }

@@ -19,12 +19,12 @@ import io.netty.util.concurrent.UnorderedThreadPoolEventExecutor;
 public class Netty {
     private UnorderedThreadPoolEventExecutor executorGroup;
 
-    public Netty() throws Exception {
+    public Netty(int port) throws Exception {
         UtilConsole.log("Netty sunucusu aktifleşiyor...");
-        enable();
+        enable(port);
     }
 
-    private void enable() throws Exception {
+    private void enable(int port) throws Exception {
         ResourceLeakDetector.setLevel( ResourceLeakDetector.Level.DISABLED ); // Eats performance
 
         EventLoopGroup producer = new NioEventLoopGroup(32);
@@ -53,7 +53,7 @@ public class Netty {
                     .option(ChannelOption.SO_RCVBUF, Integer.MAX_VALUE);
 
             UtilConsole.log("Netty sunucusu aktif edildi!");
-            bootstrap.bind(Configuration.NETTY_PORT).sync().channel().closeFuture().sync();
+            bootstrap.bind(port).sync().channel().closeFuture().sync();
         }catch(Exception ex){
             ex.printStackTrace();
             UtilConsole.log("Netty sunucusu aktif edilemedi.");
