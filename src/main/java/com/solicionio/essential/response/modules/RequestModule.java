@@ -18,8 +18,8 @@ import org.json.JSONObject;
 @Setter
 public abstract class RequestModule implements IRequest {
 
-    private String callName;
     private boolean sync;
+    private int orderId;
 
     @Override
     public void error(ChannelHandlerContext ctx, Object object) {

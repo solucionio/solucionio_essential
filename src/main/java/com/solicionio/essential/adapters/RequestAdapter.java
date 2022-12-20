@@ -13,12 +13,16 @@ public class RequestAdapter {
 
     public static void registerModules(List<RequestModule> requestModuleList) {
         for(RequestModule module : requestModuleList) {
-            moduleAdapter.put(module.getCallName(), module);
+            moduleAdapter.put(module.getClass().getSimpleName().toLowerCase(), module);
         }
     }
 
-    public static RequestModule getModule(String moduleName) {
-        return moduleAdapter.getOrDefault(moduleName, null);
+    public static RequestModule getModule(Class<RequestModule> module) {
+        return moduleAdapter.getOrDefault(module.getSimpleName().toLowerCase(), null);
     }
+    public static RequestModule getModule(String moduleName) {
+        return moduleAdapter.getOrDefault(moduleName.toLowerCase(), null);
+    }
+
 
 }
