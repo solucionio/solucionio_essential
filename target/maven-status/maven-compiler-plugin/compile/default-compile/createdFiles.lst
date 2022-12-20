@@ -7,14 +7,12 @@ com\solicionio\essential\adapters\PacketAdapter.class
 com\solicionio\essential\response\enums\ResponseDataType.class
 com\solicionio\essential\response\modules\ResponseData.class
 com\solicionio\essential\Configuration.class
-com\solicionio\essential\response\constants\SuccessMessage.class
 com\solicionio\essential\netty\handler\WebSocketHandler.class
 com\solicionio\essential\netty\Netty$1.class
 com\solicionio\essential\utils\UtilConsole.class
 com\solicionio\essential\utils\UtilJSON.class
 com\solicionio\essential\response\enums\PacketType.class
 com\solicionio\essential\response\enums\ResponseErrorType.class
-com\solicionio\essential\response\constants\ErrorMessage.class
 com\solicionio\essential\response\ResponseDataProvider.class
 com\solicionio\essential\Essential.class
 com\solicionio\essential\response\modules\RequestModule.class

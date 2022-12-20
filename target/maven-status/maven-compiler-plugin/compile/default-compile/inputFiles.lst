@@ -3,7 +3,6 @@ C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\es
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\utils\UtilJSON.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\response\ResponseDataProvider.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\response\modules\ResponseData.java
-C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\response\constants\SuccessMessage.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\response\enums\ResponseErrorType.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\database\Redis.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\netty\Netty.java
@@ -17,4 +16,3 @@ C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\es
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\utils\UtilConsole.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\netty\handler\WebSocketHandler.java
 C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\adapters\RequestAdapter.java
-C:\Users\tunay\IdeaProjects\solucionio_essential\src\main\java\com\solicionio\essential\response\constants\ErrorMessage.java

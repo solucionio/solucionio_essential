@@ -18,7 +18,8 @@ import org.json.JSONObject;
 @Setter
 public abstract class RequestModule implements IRequest {
 
-    private RequestType requestType;
+    private String callName;
+    private boolean sync;
 
     @Override
     public void error(ChannelHandlerContext ctx, Object object) {
@@ -42,14 +43,12 @@ public abstract class RequestModule implements IRequest {
 
     @Override
     public void onAction(ChannelHandlerContext ctx, Object msg) {
-        if(isSYNC()){
+        if(sync){
             PacketAdapter.addRequestQueue(() -> { response(ctx, msg); });
             return;
         }
 
         response(ctx, msg);
     }
-
-    protected boolean isSYNC(){ return requestType.getPacketType().equals(PacketType.SYNC); }
 
 }

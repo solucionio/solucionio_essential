@@ -2,6 +2,7 @@ package com.solicionio.essential.netty.handler;
 
 import com.solicionio.essential.adapters.RequestAdapter;
 import com.solicionio.essential.response.enums.RequestType;
+import com.solicionio.essential.response.modules.RequestModule;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
@@ -22,10 +23,10 @@ public class WebSocketHandler extends ChannelInboundHandlerAdapter {
             return;
         }
 
-        RequestType requestType = RequestType.getRequestType(data.get("requestType").toString());
-        if(requestType == null) return;
+        RequestModule requestModule = RequestAdapter.getModule(data.get("requestType").toString());
+        if(requestModule == null) return;
 
-        RequestAdapter.getModule(requestType).onAction(ctx, msg);
+        requestModule.onAction(ctx, msg);
     }
 
     @Override
