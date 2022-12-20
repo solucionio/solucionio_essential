@@ -21,12 +21,12 @@ public enum RequestType {
         this.groupOrderID = groupOrderID;
     }
 
-    public static RequestType getRequestType(String requestName) {
-        return Arrays.stream(RequestType.values()).filter(type -> type.requestName.equalsIgnoreCase(requestName)).findFirst().orElse(null);
+    public static com.solicionio.essential.response.enums.RequestType getRequestType(String requestName) {
+        return Arrays.stream(com.solicionio.essential.response.enums.RequestType.values()).filter(type -> type.requestName.equalsIgnoreCase(requestName)).findFirst().orElse(null);
     }
 
-    public static RequestType getRequestType(int index) {
-        return Arrays.stream(RequestType.values()).filter(type -> type.ordinal() == index).findFirst().orElse(null);
+    public static com.solicionio.essential.response.enums.RequestType getRequestType(int index) {
+        return Arrays.stream(com.solicionio.essential.response.enums.RequestType.values()).filter(type -> type.ordinal() == index).findFirst().orElse(null);
     }
 
 }
